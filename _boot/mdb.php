@@ -259,6 +259,26 @@ class DB {
          return $this;
      }
 
+     public function truncate()
+     {
+
+         $this->_sql = "TRUNCATE TABLE `$this->_tblName` ;" ;
+          // log the sql if sql log varible is true in the configuration file 
+          $this->log_sql($this->_sql);
+          return $this;
+
+     }
+
+     public function drop()
+     {
+
+         $this->_sql = "DROP TABLE `$this->_tblName` ;" ;
+          // log the sql if sql log varible is true in the configuration file 
+          $this->log_sql($this->_sql);
+          return $this;
+
+     }
+
 
      
 

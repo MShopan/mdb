@@ -63,6 +63,7 @@ $test =  DB::table('users')->insert( array (
 
 echo  mhtml::h3($test->get_sql());
 
+
 mhtml::br();
 
 $test2 =  DB::table('users')->where('id',8)
@@ -71,4 +72,10 @@ $test2 =  DB::table('users')->where('id',8)
 
 echo  mhtml::h3($test2->get_sql());
 
+mhtml::br();
+
+$TEST3   =  DB::table('users')->drop();
+
+
+echo  mhtml::h3($TEST3  ->get_sql());
 ?>

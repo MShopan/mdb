@@ -97,20 +97,29 @@ class DB {
 
 
 
-    public function makeEqualAssign($_key , $_val){
+    public function makeEqualAssign($_key , $_val , $option = "="){
         //secure first
         $_val = $this->secure_value($_val);
         $_key = $this->secure_key($_key);
         //end
-        $assign = " `$_key` = '$_val' " ;
+        $assign = " `$_key` $option '$_val' " ;
 
         return $assign ;
       
     }
 
-    public function where($_key , $_val) {
-         
-        $myAssign = $this->makeEqualAssign($_key , $_val) ;
+    public function where($_key  , $_val  , $option = "=") {
+
+        if ($_val == "LIKE"){
+            // if query use LIKE
+            $_val = $option ;
+            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+        } else {
+            // if =  only
+
+            $myAssign = $this->makeEqualAssign($_key , $_val ) ;
+        }
+        
 
         $this->_sql = $this->_sql . 
         " WHERE $myAssign" ;
@@ -120,9 +129,17 @@ class DB {
 
 
 
-    public function orWhere($_key , $_val){
+    public function orWhere($_key , $_val ,$option = "="){
 
-        $myAssign = $this->makeEqualAssign($_key , $_val) ;
+        if ($_val == "LIKE"){
+            // if query use LIKE
+            $_val = $option ;
+            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+        } else {
+            // if =  only
+
+            $myAssign = $this->makeEqualAssign($_key , $_val ) ;
+        }
 
         $this->_sql = $this->_sql . 
         " OR $myAssign" ;
@@ -131,9 +148,17 @@ class DB {
 
     }
 
-    public function andWhere($_key , $_val){
+    public function andWhere($_key , $_val , $option = "="){
 
-        $myAssign = $this->makeEqualAssign($_key , $_val) ;
+        if ($_val == "LIKE"){
+            // if query use LIKE
+            $_val = $option ;
+            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+        } else {
+            // if =  only
+
+            $myAssign = $this->makeEqualAssign($_key , $_val ) ;
+        }
 
         $this->_sql = $this->_sql . 
         " AND $myAssign" ;

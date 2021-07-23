@@ -66,11 +66,19 @@ echo  mhtml::h3($test->get_sql());
 
 mhtml::br();
 
-$test2 =  DB::table('users')->where('id',8)
+$test2 =  DB::table('users')->where('id',8)->orWhere('name','LIKE',"h")->andWhere('ido','LIKE',8)
                    ->delete();
 
 
 echo  mhtml::h3($test2->get_sql());
+
+mhtml::br();
+
+$test4 =  DB::table('users')->where('id',9)
+                   ->delete();
+
+
+echo  mhtml::h3($test4->get_sql());
 
 mhtml::br();
 

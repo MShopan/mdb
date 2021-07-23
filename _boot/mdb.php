@@ -242,6 +242,23 @@ class DB {
          return $this;
      }
 
+     // DELETE FROM `users` WHERE `id` = '15' ;
+     public function delete(){
+        $end = ""; 
+        if(!empty($this->_limit)){
+             $end = " $this->_limit ";
+        }
+        $this->_sql = 
+         "DELETE FROM `$this->_tblName`"
+         . $this->_sql 
+         . $end ." ; " ;
+
+         // log the sql if sql log varible is true in the configuration file 
+         $this->log_sql($this->_sql);
+
+         return $this;
+     }
+
 
      
 

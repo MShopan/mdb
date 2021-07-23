@@ -10,6 +10,21 @@ class mhtml {
     static function h1($txt){
         echo  '<h1>' , $txt , '</h1>';
     }
+    static function h2($txt){
+        echo  '<h2>' , $txt , '</h2>';
+    }
+    static function h3($txt){
+        echo  '<h3>' , $txt , '</h3>';
+    }
+    static function h4($txt){
+        echo  '<h4>' , $txt , '</h4>';
+    }
+    static function h5($txt){
+        echo  '<h5>' , $txt , '</h5>';
+    }
+    static function h6($txt){
+        echo  '<h6>' , $txt , '</h6>';
+    }
 
     /**
      * print new line in html formate

@@ -4,12 +4,15 @@
  * this is query builder like laravel to secure db 
  * created by : mohammed shopan in 2021
  * 
+ * link blow to convert the regrular sql to qery builder
+ * https://sql2builder.github.io/
+ * 
  */
 
 
-//   for test this mdb class
+//   for test this DB class
 
-//   $user =  mdb::table('users')
+//   $user =  DB::table('users')
 //                 ->where('id',2)
 //                 ->andWhere('firstName','mohammed')
 //                 ->get();
@@ -18,7 +21,7 @@
   
  
 
-class mdb {
+class DB {
     /**
      * for test only print hello form  on the page 
      */
@@ -31,6 +34,7 @@ class mdb {
     private $password = '';
 
     private $_sql ='';
+    private $_limit = '';
     private $_tblName = '';
 
 
@@ -58,7 +62,7 @@ class mdb {
 
     static function hello(){
           //global $mathing ;
-          echo 'hello form mdb class static method : ' , self::$appName , '<br>' ;
+          echo 'hello form DB class static method : ' , self::$appName , '<br>' ;
           //echo $mathing ;
     }
 
@@ -85,9 +89,9 @@ class mdb {
 
     public function table($tblName) {
 
-        $_my_mdb = new mdb();
-        $_my_mdb->setTblName($tblName);
-        return $_my_mdb;
+        $_my_DB = new DB();
+        $_my_DB->setTblName($tblName);
+        return $_my_DB;
         
     }
 
@@ -98,7 +102,7 @@ class mdb {
         $_val = $this->secure_value($_val);
         $_key = $this->secure_key($_key);
         //end
-        $assign = " `$_key` = $_val " ;
+        $assign = " `$_key` = '$_val' " ;
 
         return $assign ;
       
@@ -138,17 +142,32 @@ class mdb {
 
     }
 
+    /**
+     * set the limit of sql query 
+     */
+    public function limit($limit)
+    {
+
+        $this->_limit = " LIMIT $limit " ; 
+
+        return $this;
+        
+    }
+
 
     /**
      * sql = "SLECT * from `users` WHERE `id` = 2 ;" 
      */
 
     public function get(){
-        
+        $end = ""; 
+        if(!empty($this->_limit)){
+             $end = " $this->_limit ";
+        }
         $this->_sql = 
          "SELECT * FROM `$this->_tblName`"
          . $this->_sql 
-         ." ; " ;
+         . $end ." ; " ;
 
          // log the sql if sql log varible is true in the configuration file 
          $this->log_sql($this->_sql);

@@ -34,11 +34,20 @@ mhtml::endTr();
 
 mhtml::endTable(); 
 
-$user =  mdb::table('users')->where('id',2)
-                     ->andWhere('firstName','mohammed')
+$user =  DB::table('users')->where('id','2')
+                     ->andWhere('lastName','mohammed')
+                     ->limit(5)
                      ->get();
 
 echo $user->get_sql();
+
+mhtml::br();
+
+$user =  DB::table('ca')
+
+->get();
+
+echo  mhtml::h3($user->get_sql());
 
 
 

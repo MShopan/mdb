@@ -49,6 +49,20 @@ $user =  DB::table('ca')
 
 echo  mhtml::h3($user->get_sql());
 
+// $_arr = new array ([
+//     'email' => 'kayla@example.com',
+//     'votes' => 0
+// ]);
+
+$test =  DB::table('users')->insert( array ( 
+    'email' => 'kayla@example.com',
+    'votes' => 0 ,
+    'aa' => "m" ,
+));
+
+
+echo  mhtml::h3($test->get_sql());
+
 
 
 

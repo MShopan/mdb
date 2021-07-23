@@ -177,6 +177,73 @@ class DB {
         
     }
 
+    
+    // INSERT INTO `waiters` (
+    //     `id` ,
+    //     `name` ,
+    //     `real_name` ,
+    //     `creator` ,
+    //     `notes`
+    //     )
+    //     VALUES (
+    //     NULL , 'hassan', 'hassan', '', ''
+    //     );
+
+
+    // $test =  DB::table('users')->insert( array ( 
+    //     'email' => 'kayla@example.com',
+    //     'votes' => 0 ,
+    //   
+    // ));
+
+    /**
+     * funciton to insert into table
+     */
+
+     public function insert(array $arr)
+     {
+
+        $my_keys = ''; 
+        $my_vals = ''; 
+
+        $i = 1;
+
+        $comma = ",";
+
+        // loop throug the arry and connact keys nas vals
+        foreach ($arr as $key => $value) {
+            //secure first 
+            $key = $this->secure_key($key);
+            $value = $this->secure_value($value);
+            //end
+
+            // if last item
+            // remover the comma  
+            if(count($arr) == $i){ $comma = ""; }
+
+            // connact the key
+            $my_keys = $my_keys."`$key` $comma" ;
+            
+            // if value is string add '' arround it 
+            if (is_string($value)){
+               $value = "'$value'";
+            }
+            
+            $my_vals = $my_vals."$value $comma";
+
+            $i++;
+
+        }
+
+        // write the sql query 
+         $this->_sql = 
+         "INSERT INTO `$this->_tblName` ($my_keys) VALUE ($my_vals) ;"; 
+
+         return $this;
+     }
+
+
+     
 
 
 }

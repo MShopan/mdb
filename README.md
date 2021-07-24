@@ -16,6 +16,8 @@ the project run in php 5 and above
 
 ## delete
 
+## update
+
 ## truncate
 
 ## drop

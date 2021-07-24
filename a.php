@@ -93,4 +93,12 @@ $TEST3   =  DB::table('users')->drop();
 
 
 echo  mhtml::h3($TEST3  ->get_sql());
+
+$test55   =  DB::table('users')->where('id',2)->where('name','LIKE','%s')
+                          ->update(array('name'=>'ali' , 'coadx' => 010001000 ) );
+
+
+echo  mhtml::h3($test55  ->get_sql());
+
+
 ?>

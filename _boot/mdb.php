@@ -351,6 +351,47 @@ class DB {
 
      }
 
+     // update sample 
+     //  UPDATE `waiters` SET `name` = 'ddd', `creator` = 'd' WHERE `id` =18 LIMIT 1 ;
+
+     public function update(array $arr){
+      
+
+        $_connact = ''; 
+
+        $i = 1;
+
+        $comma = ",";
+
+        // loop throug the arry and connact keys nas vals
+        foreach ($arr as $key => $value) {
+            //secure first 
+            $key = $this->secure_key($key);
+            $value = $this->secure_value($value);
+            //end
+
+            // if last item
+            // remover the comma  
+            if(count($arr) == $i){ $comma = ""; }
+            
+            // if value is string add '' arround it 
+            if (is_string($value)){
+               $value = "'$value'";
+            }
+            // connact the key
+            $_connact = $_connact . " `$key` = $value " . $comma ; 
+
+            $i++;
+
+        }
+
+        // write the sql query 
+         $this->_sql = 
+         "UPDATE `$this->_tblName` SET $_connact $this->_sql ;"; 
+
+         return $this;
+     }
+
 
      
 

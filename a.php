@@ -46,7 +46,11 @@ mhtml::br();
 
 $user =  DB::table('facebook')->where('name','LIKE','amr')->get();
 
+
+
 echo  mhtml::h3($user->get_sql());
+
+// echo mhtml::dump($user->result);
 
 // $_arr = new array ([
 //     'email' => 'kayla@example.com',

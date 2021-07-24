@@ -39,6 +39,7 @@ class DB {
     private $_sql ='';
     private $_limit = '';
     private $_tblName = '';
+    public $result = null ; 
 
 
     function __construct(){

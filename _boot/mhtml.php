@@ -4,9 +4,19 @@
  * 
  */
 class mhtml {
+
+    // var dump 
+    static function dump($var) {
+        echo '<pre>' , var_dump($var) , '</pre>' ;
+    }
+
+    static function print_r($var) {
+        echo '<pre>' , print_r($var) , '</pre>' ;
+    }
     /**
      * print h1 tag with txt in the file
      */
+
     static function h1($txt){
         echo  '<h1>' , $txt , '</h1>';
     }
@@ -66,6 +76,8 @@ class mhtml {
         echo '<td>', $content ,'</td>';
         
     }
+
+    
 
     
 

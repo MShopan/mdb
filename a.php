@@ -34,12 +34,12 @@ mhtml::endTr();
 
 mhtml::endTable(); 
 
-$user =  DB::table('users')->where('id','2')
-                     ->andWhere('lastName','mohammed')
-                     ->limit(5)
-                     ->get();
+// $user =  DB::table('users')->where('id','2')
+//                      ->andWhere('lastName','mohammed')
+//                      ->limit(5)
+//                      ->get();
 
-echo $user->get_sql();
+// echo $user->get_sql();
 
 mhtml::br();
 
@@ -66,8 +66,11 @@ echo  mhtml::h3($test->get_sql());
 
 mhtml::br();
 
-$test2 =  DB::table('users')->where('id',8)->orWhere('name','LIKE',"h")->andWhere('ido','LIKE',8)
-                   ->delete();
+$test2 =  DB::table('users')
+            ->where('id','2')
+            ->orWhere('fristName','khaled')
+            ->where('name','ali')
+            ->get();
 
 
 echo  mhtml::h3($test2->get_sql());

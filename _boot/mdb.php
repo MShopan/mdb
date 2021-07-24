@@ -33,6 +33,8 @@ class DB {
     public $username = '';
     private $password = '';
 
+    private $_hasWhere = false;
+
     private $_sql ='';
     private $_limit = '';
     private $_tblName = '';
@@ -110,6 +112,22 @@ class DB {
 
     public function where($_key  , $_val  , $option = "=") {
 
+        if($this->_hasWhere==true){
+            // if has where before run and where 
+            $this->andWhere($_key  , $_val  , $option = "=");
+        
+        } else {
+            $this->firstWhere($_key  , $_val  , $option = "=");
+        }
+
+        return $this;
+
+    }
+
+    public function firstWhere($_key  , $_val  , $option = "=") {
+
+     
+
         if ($_val == "LIKE"){
             // if query use LIKE
             $_val = $option ;
@@ -124,10 +142,45 @@ class DB {
         $this->_sql = $this->_sql . 
         " WHERE $myAssign" ;
 
+        
+        
+        // set has where = true 
+        $this->_hasWhere=true; 
+        
+        // mhtml::print_r($this)  ;
         return $this;
+
     }
 
 
+
+    public function andWhere($_key , $_val , $option = "="){
+
+     
+
+        if ($_val == "LIKE"){
+            // if query use LIKE
+            $_val = $option ;
+            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+        } else {
+            // if =  only
+
+            $myAssign = $this->makeEqualAssign($_key , $_val ) ;
+        }
+
+        $this->_sql = $this->_sql . 
+        " AND $myAssign" ;
+
+        return $this;
+
+    }
+
+
+    /**
+     * 
+     * do and where function OR in sql 
+     * 
+     */
 
     public function orWhere($_key , $_val ,$option = "="){
 
@@ -143,25 +196,6 @@ class DB {
 
         $this->_sql = $this->_sql . 
         " OR $myAssign" ;
-
-        return $this;
-
-    }
-
-    public function andWhere($_key , $_val , $option = "="){
-
-        if ($_val == "LIKE"){
-            // if query use LIKE
-            $_val = $option ;
-            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
-        } else {
-            // if =  only
-
-            $myAssign = $this->makeEqualAssign($_key , $_val ) ;
-        }
-
-        $this->_sql = $this->_sql . 
-        " AND $myAssign" ;
 
         return $this;
 

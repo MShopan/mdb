@@ -43,9 +43,8 @@ mhtml::endTable();
 
 mhtml::br();
 
-$user =  DB::table('ca')
 
-->get();
+$user =  DB::table('facebook')->where('name','LIKE','amr')->get();
 
 echo  mhtml::h3($user->get_sql());
 
@@ -66,9 +65,10 @@ echo  mhtml::h3($test->get_sql());
 
 mhtml::br();
 
-$test2 =  DB::table('users')
-            ->where('id','2')
-            ->orWhere('fristName','khaled')
+$test2 =  DB::table('twitter')
+            ->where('seasion' , '5' )
+            ->andwhere('id','>','2')
+            ->orWhere('fristName','<>','khaled')
             ->where('name','ali')
             ->get();
 

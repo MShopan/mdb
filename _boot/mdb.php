@@ -34,6 +34,7 @@ class DB {
     private $password = '';
 
     private $_hasWhere = false;
+    private $compare_signs = array('LIKE' , '>' ,'<' , '<>' , '<=' ,'>=' ) ;
 
     private $_sql ='';
     private $_limit = '';
@@ -110,14 +111,15 @@ class DB {
       
     }
 
+
     public function where($_key  , $_val  , $option = "=") {
 
         if($this->_hasWhere==true){
             // if has where before run and where 
-            $this->andWhere($_key  , $_val  , $option = "=");
+            $this->andWhere($_key  , $_val  , $option );
         
         } else {
-            $this->firstWhere($_key  , $_val  , $option = "=");
+            $this->firstWhere($_key  , $_val  , $option );
         }
 
         return $this;
@@ -128,12 +130,16 @@ class DB {
 
      
 
-        if ($_val == "LIKE"){
-            // if query use LIKE
+        if ( in_array($_val, $this->compare_signs ) ){
+            // if query use LIKE or another sign 
+            $compare = $_val ;
+
             $_val = $option ;
-            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+      
+
+            $myAssign = $this->makeEqualAssign($_key , $_val , $compare ) ;
         } else {
-            // if =  only
+            // if eqal sign only  only
 
             $myAssign = $this->makeEqualAssign($_key , $_val ) ;
         }
@@ -156,14 +162,16 @@ class DB {
 
     public function andWhere($_key , $_val , $option = "="){
 
-     
+        if ( in_array($_val, $this->compare_signs ) ){
+            // if query use LIKE or another sign 
+            $compare = $_val ;
 
-        if ($_val == "LIKE"){
-            // if query use LIKE
             $_val = $option ;
-            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+      
+
+            $myAssign = $this->makeEqualAssign($_key , $_val , $compare ) ;
         } else {
-            // if =  only
+            // if = only
 
             $myAssign = $this->makeEqualAssign($_key , $_val ) ;
         }
@@ -184,10 +192,14 @@ class DB {
 
     public function orWhere($_key , $_val ,$option = "="){
 
-        if ($_val == "LIKE"){
-            // if query use LIKE
+        if ( in_array($_val, $this->compare_signs ) ){
+            // if query use LIKE or another sign 
+            $compare = $_val ;
+
             $_val = $option ;
-            $myAssign = $this->makeEqualAssign($_key , $_val , "LIKE" ) ;
+      
+
+            $myAssign = $this->makeEqualAssign($_key , $_val , $compare ) ;
         } else {
             // if =  only
 

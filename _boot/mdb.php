@@ -45,7 +45,7 @@ class DB {
     function __construct(){
 
         $this->host = '127.0.0.1';
-        $this->db_name = 'acc_main_port';
+        $this->db = 'acc_main_port';
         $this->username = 'root';
         $this->password = 'egypt2013';
        
@@ -244,7 +244,9 @@ class DB {
          // log the sql if sql log varible is true in the configuration file 
          $this->log_sql($this->_sql);
 
-         return $this;
+         $this->excute();
+
+         return $this->result;
 
         
     }
@@ -391,6 +393,37 @@ class DB {
 
          return $this;
      }
+
+     function excute(){
+
+        $connect=mysqli_connect($this->host,$this->username,$this->password,$this->db);
+
+        $connect->set_charset("utf8"); 
+        
+        date_default_timezone_set('Africa/Cairo');
+
+        $query=mysqli_query($connect,$this->_sql);
+
+        $this->result =  array();
+
+        
+        while($row=mysqli_fetch_assoc($query)){
+
+            array_push($this->result , $row);
+        }
+
+        return $this->result;
+
+
+
+     }
+
+    
+
+
+     
+
+
 
 
      

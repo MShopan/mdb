@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php
+    include('_boot/style.html');
+    ?> 
+
+</head>
+<body>
+
 <?php 
 $mathing = 1001 ;
 require('_boot/mdb.php');
@@ -21,18 +35,7 @@ mhtml::br();
 
 
 
-mhtml::startTable(); 
 
-mhtml::startTr(); 
-mhtml::th('name');
-mhtml::endTr(); 
-
-mhtml::startTr(); 
-mhtml::td('mohammed');
-mhtml::endTr(); 
-
-
-mhtml::endTable(); 
 
 // $user =  DB::table('users')->where('id','2')
 //                      ->andWhere('lastName','mohammed')
@@ -44,11 +47,12 @@ mhtml::endTable();
 mhtml::br();
 
 
-$user =  DB::table('facebook')->where('name','LIKE','amr')->get();
+$waiters =  DB::table('section')->get();
+
+mhtml::print_r_table($waiters , array('name','waiter','creator'));
 
 
-
-echo  mhtml::h3($user->get_sql());
+// mhtml::print_r($waiters);
 
 // echo mhtml::dump($user->result);
 
@@ -57,48 +61,52 @@ echo  mhtml::h3($user->get_sql());
 //     'votes' => 0
 // ]);
 
-$test =  DB::table('users')->insert( array ( 
-    'email' => 'kayla@example.com',
-    'votes' => 0 ,
-    'aa' => "m" ,
-));
+// $test =  DB::table('users')->insert( array ( 
+//     'email' => 'kayla@example.com',
+//     'votes' => 0 ,
+//     'aa' => "m" ,
+// ));
 
 
-echo  mhtml::h3($test->get_sql());
+// echo  mhtml::h3($test->get_sql());
 
 
-mhtml::br();
+// mhtml::br();
 
-$test2 =  DB::table('twitter')
-            ->where('seasion' , '5' )
-            ->andwhere('id','>','2')
-            ->orWhere('fristName','<>','khaled')
-            ->where('name','ali')
-            ->get();
-
-
-echo  mhtml::h3($test2->get_sql());
-
-mhtml::br();
-
-$test4 =  DB::table('users')->where('id',9)
-                   ->delete();
+// $test2 =  DB::table('twitter')
+//             ->where('seasion' , '5' )
+//             ->andwhere('id','>','2')
+//             ->orWhere('fristName','<>','khaled')
+//             ->where('name','ali')
+//             ->get();
 
 
-echo  mhtml::h3($test4->get_sql());
+// echo  mhtml::h3($test2->get_sql());
 
-mhtml::br();
+// mhtml::br();
 
-$TEST3   =  DB::table('users')->drop();
-
-
-echo  mhtml::h3($TEST3  ->get_sql());
-
-$test55   =  DB::table('users')->where('id',2)->where('name','LIKE','%s')
-                          ->update(array('name'=>'ali' , 'coadx' => 010001000 ) );
+// $test4 =  DB::table('users')->where('id',9)
+//                    ->delete();
 
 
-echo  mhtml::h3($test55  ->get_sql());
+// echo  mhtml::h3($test4->get_sql());
+
+// mhtml::br();
+
+// $TEST3   =  DB::table('users')->drop();
+
+
+// echo  mhtml::h3($TEST3  ->get_sql());
+
+// $test55   =  DB::table('users')->where('id',2)->where('name','LIKE','%s')
+//                           ->update(array('name'=>'ali' , 'coadx' => 010001000 ) );
+
+
+// echo  mhtml::h3($test55  ->get_sql());
 
 
 ?>
+
+    
+</body>
+</html>

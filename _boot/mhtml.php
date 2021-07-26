@@ -13,6 +13,46 @@ class mhtml {
     static function print_r($var) {
         echo '<pre>' , print_r($var) , '</pre>' ;
     }
+
+    static function print_r_table(array $arr , array $only = array()){
+
+
+        // open the table 
+        self::startTable("pure-table");
+        self::startTr();
+
+        // print table header
+        foreach ($arr[0] as $key => $value) { 
+
+            if ( empty($only)){
+                self::th($key);
+            } elseif ( in_array($key,$only) ) {
+                self::th($key);
+            }
+
+        }
+        self::endTr();
+
+
+        // print table rows
+
+        foreach ($arr as $key => $value) { 
+            self::startTr();
+                foreach ($value as $subKey => $subValue) {
+                    if (empty($only) ){
+
+                        self::th($subValue);
+                    } elseif (in_array($subKey,$only) ){
+                        self::th($subValue);
+                        
+                    }
+                }
+            self::endTr();
+            
+        }
+
+        self::endTable();
+    }
     /**
      * print h1 tag with txt in the file
      */
@@ -47,8 +87,8 @@ class mhtml {
         echo "<script> alert('$txt') </script>" ;
     }
 
-    static function startTable(){
-        echo '<table class="">';
+    static function startTable($class = ""){
+        echo "<table class=\"$class\">";
     }
 
    

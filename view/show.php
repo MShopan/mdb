@@ -26,10 +26,12 @@ mhtml::h1($model->show_title);
 
 $tbl =  DB::table($tbl_name)->get();
 
-mhtml::print_r_table($tbl);
+mhtml::a("add","insert.php?model=$tbl_name");
 
+mhtml::print_show_table($tbl,$tbl_name);
 
 ?>
+
     
 </body>
 </html>

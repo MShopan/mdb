@@ -14,6 +14,61 @@ class mhtml {
         echo '<pre>' , print_r($var) , '</pre>' ;
     }
 
+
+    static function print_show_table(array $arr,$model){
+
+        $edit= true; 
+        $delete = true ;
+
+        // open the table 
+        self::startTable("pure-table");
+        self::startTr();
+
+        // print table header
+        foreach ($arr[0] as $key => $value) { 
+
+
+                self::th($key);
+           
+
+        }
+
+        if($edit){   self::th('edit');  }
+        if($delete){   self::th('delete'); }
+
+        self::endTr();
+
+
+        // print table rows
+        $currentId = null; 
+
+        foreach ($arr as $key => $value) { 
+            self::startTr();
+                foreach ($value as $subKey => $subValue) {
+
+                        self::th($subValue);
+
+                        if($subKey=="id"){
+                            $currentId = $subValue ;
+                        }
+                        
+                  
+                }
+                // aditionl td
+                if($edit){   self::th("<a href='edit.php?model=$model&id=$currentId'>edit</a>");  }
+                if($delete){   self::th("<a href='delete.php?model=$model&id=$currentId'>delete</a>"); }
+
+            self::endTr();
+            
+        }
+
+
+
+        self::endTable();
+    }
+
+
+
     static function print_r_table(array $arr , array $only = array()){
 
 
@@ -79,6 +134,11 @@ class mhtml {
     /**
      * print new line in html formate
      */
+
+    static function a($title , $href , $class=""){
+         echo "<a class='$class' href='$href'>$title</a>";
+    }
+
     static function br(){
         echo  '<br>';
     }

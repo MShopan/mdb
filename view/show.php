@@ -10,9 +10,8 @@
 
 <?php
 
-require('../_boot/mhtml.php');
-require('../_boot/mdb.php');
-require('../_boot/style.html');
+require('../_boot/bootstrap.php');
+
 
 $tbl_name = htmlspecialchars($_GET['model']);
 

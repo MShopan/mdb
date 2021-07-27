@@ -8,18 +8,18 @@ console.log(_files);
 
 loadLog();
 
-setInterval(() => {
-    try{
+// setInterval(() => {
+//     try{
 
-        loadLog();
-    } catch (error) {
-        // do nothing
-    }
-
-
+//         loadLog();
+//     } catch (error) {
+//         // do nothing
+//     }
 
 
-}, 2000 );
+
+
+// }, 2000 );
 
 // import function for string will use
 // splite
@@ -54,12 +54,15 @@ lines.forEach(line => {
 
         let _date = line_content[0].substr(1);
         let _class = line_content[1].substr(1);
-        let _data = line_content[2].trim().substr(1);
+        // !important use king in the future to set color and king of log
+        let _kind = line_content[2].substr(1);        
+        let _data = line_content[3].trim().substr(1);
         
     
         myObj = { 
             'date' : _date , 
             'class' : _class , 
+            'kind' : _kind ,
             'data' : _data 
          }
     

@@ -244,7 +244,7 @@ class DB {
          . $end ." ; " ;
 
          // log the sql if sql log varible is true in the configuration file 
-         logger::log($this->_sql,"DB:$this->_tblName");
+         logger::info($this->_sql,"DB:$this->_tblName");
 
          $this->excute();
 

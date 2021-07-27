@@ -22,9 +22,10 @@ class mhtml {
 
         $modelObj = new $model ;
 
-         
+        $table_class= "pure-table";
 
-        self::startTable("pure-table");
+
+        self::startTable($table_class);
         self::startTr();
 
         // print table header

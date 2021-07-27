@@ -14,8 +14,9 @@
 
 <?php 
 $mathing = 1001 ;
-require('_boot/mdb.php');
-require('_boot/mhtml.php');
+
+
+require('_boot/bootstrap.php');
 
 
 

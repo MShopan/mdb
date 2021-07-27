@@ -18,13 +18,15 @@
 //                 ->get();
  
 //   echo $user->get_sql();
-  
+
  
 
 class DB {
     /**
      * for test only print hello form  on the page 
      */
+
+
     
     static $appName = 'accounting';
     
@@ -242,7 +244,7 @@ class DB {
          . $end ." ; " ;
 
          // log the sql if sql log varible is true in the configuration file 
-         $this->log_sql($this->_sql);
+         logger::log($this->_sql,"DB:$this->_tblName");
 
          $this->excute();
 

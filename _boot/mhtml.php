@@ -20,15 +20,20 @@ class mhtml {
         $edit= true; 
         $delete = true ;
 
-        // open the table 
+        $modelObj = new $model ;
+
+         
+
         self::startTable("pure-table");
         self::startTr();
 
         // print table header
         foreach ($arr[0] as $key => $value) { 
 
+        if(in_array($key,$modelObj->show)){
 
-                self::th($key);
+            self::th($key);
+        }
            
 
         }
@@ -46,11 +51,14 @@ class mhtml {
             self::startTr();
                 foreach ($value as $subKey => $subValue) {
 
-                        self::th($subValue);
+                    if(in_array($subKey,$modelObj->show)){
 
-                        if($subKey=="id"){
-                            $currentId = $subValue ;
-                        }
+                        self::th($subValue);
+                    }
+
+                    if($subKey=="id"){
+                        $currentId = $subValue ;
+                    }
                         
                   
                 }

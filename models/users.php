@@ -6,14 +6,15 @@ class users {
 
      public $struct = array (
          'id' => 'int',
-         'name' => 'string',
+         'user' => 'string',
          'real_name' => 'string',
      );
 
      public $show = array ( 
          'id',
-         'name',
+         'user',
          'real_name',
+         'creator',
     );
 
     public $hide = array(

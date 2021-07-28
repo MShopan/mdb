@@ -155,6 +155,56 @@ class mhtml {
     static function sendMsg($txt){
         echo "<script> alert('$txt') </script>" ;
     }
+  
+
+
+    static function startForm($name, $action = "" , $method = "post" ){
+        if (empty($action)) {
+             $action =  $_SERVER['PHP_SELF'] ;
+        }
+        
+        echo "
+        <form name='$name' action='$action' method='$method'>\n
+        ";
+    }
+
+    static function submitForm(){
+        echo "
+        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
+        ";
+    }
+
+    static function endForm(){
+        echo "
+        </form>\n
+        ";
+    } 
+
+
+
+    static function field_id_model(){
+        $id =  $_GET['id'] ;
+        $model =  $_GET['model'] ;
+
+        echo "<input name='id' type='text' class='vis_hidden' value='$id'  >";
+        echo "<input name='model' type='text' class='vis_hidden' value='$model'  ><br>";
+    }
+
+    static function field($title , $name , $type , $value = "" ) {
+        // bootstrap css and js files is  requied to view normaly 
+
+    if( $type == "text"  || $type == "password" || $type == "number" ){
+    echo "
+    <div class=\"form-group\">
+
+        <label for=\"$name\">$title</label>
+        <input type=\"$type\" name=\"$name\" class=\"form-control\" id=\"$name\" aria-describedby=\"emailHelp\" placeholder=\"$title\" value=\"$value\">
+     
+    </div>
+    ";
+    }
+
+    }
 
     static function startTable($class = ""){
         echo "<table class=\"$class\">";
@@ -182,8 +232,7 @@ class mhtml {
     }
 
     static function td($content){
-        echo '<td>', $content ,'</td>';
-        
+        echo '<td>', $content ,'</td>';   
     }
 
     

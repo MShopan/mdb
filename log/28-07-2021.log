@@ -1,0 +1,4 @@
+[2021-07-28 01:56:37][DB:users][info]: SELECT * FROM `users` ;  
+[2021-07-28 02:52:06][DB:users][info]: SELECT * FROM `users` ;  
+[2021-07-28 03:19:31][DB:users][info]: SELECT * FROM `users` ;  
+[2021-07-28 03:19:49][DB:m_cat][info]: SELECT * FROM `m_cat` ;  

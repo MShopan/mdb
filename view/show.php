@@ -15,20 +15,15 @@ require('../_boot/bootstrap.php');
 
 $tbl_name = htmlspecialchars($_GET['model']);
 
-
-
 require("../models/$tbl_name.php");
 
-$model = new $tbl_name;
+$myModel = new $tbl_name;
 
+$myModel->add_title();
 
-mhtml::h1($model->show_title);
+$myModel->add_new_button();
 
-$tbl =  DB::table($tbl_name)->get();
-
-mhtml::a("add","insert.php?model=$tbl_name");
-
-mhtml::print_show_table($tbl,$tbl_name);
+$myModel->print_show_table();
 
 ?>
 

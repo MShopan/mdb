@@ -15,66 +15,6 @@ class mhtml {
     }
 
 
-    static function print_show_table(array $arr,$model){
-
-        $edit= true; 
-        $delete = true ;
-
-        $modelObj = new $model ;
-
-        $table_class= "pure-table";
-
-
-        self::startTable($table_class);
-        self::startTr();
-
-        // print table header
-        foreach ($arr[0] as $key => $value) { 
-
-        if(in_array($key,$modelObj->show)){
-
-            self::th($key);
-        }
-           
-
-        }
-
-        if($edit){   self::th('edit');  }
-        if($delete){   self::th('delete'); }
-
-        self::endTr();
-
-
-        // print table rows
-        $currentId = null; 
-
-        foreach ($arr as $key => $value) { 
-            self::startTr();
-                foreach ($value as $subKey => $subValue) {
-
-                    if(in_array($subKey,$modelObj->show)){
-
-                        self::th($subValue);
-                    }
-
-                    if($subKey=="id"){
-                        $currentId = $subValue ;
-                    }
-                        
-                  
-                }
-                // aditionl td
-                if($edit){   self::th("<a href='edit.php?model=$model&id=$currentId'>edit</a>");  }
-                if($delete){   self::th("<a href='delete.php?model=$model&id=$currentId'>delete</a>"); }
-
-            self::endTr();
-            
-        }
-
-
-
-        self::endTable();
-    }
 
 
 

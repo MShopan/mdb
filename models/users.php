@@ -1,8 +1,10 @@
 <?php
 
-class users {
+class users extends model {
 
-    public $show_title = "اسماء المستخدمين";
+     public $show_title = "اسماء المستخدمين";
+
+     public $tblName = "users" ;
 
      public $struct = array (
          'id' => 'int',
@@ -17,9 +19,17 @@ class users {
          'creator',
     );
 
-    public $hide = array(
+    public $secret = array(
         'password' ,
     );
+
+    public $edit = array(
+        'user',
+        'real_name',
+        'creator',
+    );
+
+    public $edit_secret = true ;
 
 
 

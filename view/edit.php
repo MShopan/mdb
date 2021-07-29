@@ -13,9 +13,9 @@
 ?>
 
 <?php
- if (isset($_POST['submit'])) {
-     echo 'submitted';
- }
+//  if (isset($_POST['submit'])) {
+//      echo 'submitted';
+//  }
 
 ?>
 
@@ -34,17 +34,13 @@
 
 <?php
 
-mhtml::startForm("edit","backend_edit.php");
+$tbl_name = htmlspecialchars($_GET['model']);
 
-mhtml::field('user name','user_name','text' ,"mohammed");
-mhtml::field('pass','password','password');
-mhtml::field('age','age','number');
+require("../models/$tbl_name.php");
 
-mhtml::field_id_model();
+$myModel = new $tbl_name;
 
-mhtml::submitForm();
-
-mhtml::endForm();
+$myModel->add_edit_form();
 
 
 ?>

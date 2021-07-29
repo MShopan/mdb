@@ -1,8 +1,12 @@
 <?php
 
-class m_cat {
+class m_cat extends model{
 
+    
+    public $tblName = "m_cat" ;
     public $show_title = "اسماء الأصناف الفرعية ";
+
+
 
      public $struct = array (
          'id' => 'int',
@@ -16,9 +20,12 @@ class m_cat {
          'real_name',
     );
 
-    public $hide = array(
-        'password' ,
+     public $edit = array ( 
+         
+         'name',
+         'real_name',
     );
+
 
 
 

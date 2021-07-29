@@ -24,18 +24,29 @@ class model {
    public function add_new_button(){
 
     $tblName = $this->get_tbl_name() ;
-    mhtml::a("add","insert.php?model=$tblName");
+
+    $virtual_add = $this->virtual_global['add'];
+    mhtml::a($virtual_add,"insert.php?model=$tblName");
 
    }
 
-    // print show table for select data
+
+   /**
+    * 
+    * print SHOW table for select data
+    *
+    */
 
    public function print_show_table(){
 
     $arr =  DB::table( $this->get_tbl_name() )->get();
 
-    $edit= true; 
-    $delete = true ;
+    $show_key_arr = array_keys($this->show);
+
+
+
+    $edit= $this->option_global['edit']; 
+    $delete= $this->option_global['delete'];     
 
     
 
@@ -45,19 +56,21 @@ class model {
     mhtml::startTable($table_class);
     mhtml::startTr();
 
+    // mhtml::dump($arr[0]['creator']);
+
     // print table header
-    foreach ($arr[0] as $key => $value) { 
+    // var show_key_arr defiened befor it is the $this->show keys only  ! if is used in this coad
+    foreach ($this->show as $key => $value) { 
 
-    if(in_array($key,$this->show)){
-
-        mhtml::th($key);
-    }
-       
-
+      mhtml::th($this->virtual_names[$value]);
+  
     }
 
-    if($edit){   mhtml::th('edit');  }
-    if($delete){   mhtml::th('delete'); }
+    // mhtml::th($arr[0][$key]);
+
+
+    if($edit){   mhtml::th($this->virtual_global['edit']);  }
+    if($delete){   mhtml::th($this->virtual_global['delete']); }
 
     mhtml::endTr();
 
@@ -65,25 +78,21 @@ class model {
     // print table rows
     $currentId = null; 
 
-    foreach ($arr as $key => $value) { 
+    foreach ($arr as $arrKey => $arrValue) { 
         mhtml::startTr();
-            foreach ($value as $subKey => $subValue) {
+            // main td form database (resources)
+            foreach ($this->show as $showKey => $showValue) {
 
-                if(in_array($subKey,$this->show)){
+                mhtml::th( $arrValue[$showValue] );
 
-                    mhtml::th($subValue);
-                }
-
-                if($subKey=="id"){
-                    $currentId = $subValue ;
-                }
-                    
-              
             }
             // aditionl td
+            $currentId = $arrValue['id'];
             $model = $this->get_tbl_name() ;
-            if($edit){   mhtml::th("<a href='edit.php?model=$model&id=$currentId'>edit</a>");  }
-            if($delete){   mhtml::th("<a href='delete.php?model=$model&id=$currentId'>delete</a>"); }
+             $virtual_edit = $this->virtual_global['edit'];
+             $virtual_delete = $this->virtual_global['delete'];
+            if($edit){   mhtml::th("<a href='edit.php?model=$model&id=$currentId'>$virtual_edit</a>");  }
+            if($delete){   mhtml::th("<a href='delete.php?model=$model&id=$currentId'>$virtual_delete</a>"); }
 
         mhtml::endTr();
         

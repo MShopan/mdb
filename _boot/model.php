@@ -111,14 +111,45 @@ class model {
  */
     public function add_edit_form(){
 
+        $_id = $_GET['id']; 
+        $tblName = $this->get_tbl_name();
+
+        $source = DB::table($tblName)->where('id',$_id)->get();
+
+        $source_first = $source[0];
+
+        // mhtml::dump($source_first);
+
+
         $struct = $this->struct;
 
         mhtml::startForm("edit","backend_edit.php");
 
         // loop througth fields
         foreach ($this->edit as $key => $field) {
-            mhtml::field($field,$field,'text');
+
+            $kind = $struct[$field] ;
+            if($kind == 'string')  {$kind = 'text' ;} 
+            $value = $source_first[$field];
+
+            mhtml::field($this->virtual_names[$field],$field,$kind,$value);
+
         }
+
+        // add secret field for password
+        if(isset($this->edit_secret)){
+            if($this->edit_secret == true ){
+
+                Logger::warn("we use one secret only on secret[0] in secret array in model");
+                $virtual_pass = $this->virtual_names[$this->secret[0]];
+                mhtml::field($virtual_pass,$this->secret[0],'password');
+
+            }
+        }
+
+       
+
+
 
 
         // mhtml::field('user name ','user_name','text',"mohammed");

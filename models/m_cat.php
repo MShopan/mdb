@@ -26,6 +26,26 @@ class m_cat extends model{
          'real_name',
     );
 
+        // virtual_names showed for user
+    public $virtual_names = array ( 
+        'id'=>'كود',
+        'real_name'=>'اسم المستخدم',
+        'name'=>'كود المستخدم',
+
+    );
+
+    public $option_global = array(
+        'edit' => true,
+        'delete' => true,
+    );
+
+
+    public $virtual_global = array(
+        'edit' => 'تعديل',
+        'delete' => 'حذف',
+        'add' => 'إضافة',
+    );
+
 
 
 

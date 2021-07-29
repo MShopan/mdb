@@ -7,15 +7,16 @@ class users extends model {
      public $tblName = "users" ;
 
      public $struct = array (
-         'id' => 'int',
+         'id' => 'number',
          'user' => 'string',
          'real_name' => 'string',
          'password' => 'string' ,
+         'creator' => 'number'
      );
 
      // virtual_names showed for user
      public $virtual_names = array ( 
-         'id'=>'م',
+         'id'=>'كود',
          'real_name'=>'اسم المستخدم',
          'user'=>'كود المستخدم',
          'creator'=>'المنشاً',
@@ -43,16 +44,27 @@ class users extends model {
     );
 
     public $secret = array(
-        'password' ,
+        'pass' ,
     );
 
+    public $edit_secret = true ;
+    
     public $edit = array(
         'user',
         'real_name',
         'creator',
     );
 
-    public $edit_secret = true ;
+
+    public function hash_secret(){
+        // do this functino to hash password when edit and insert function 
+        // use your hash logic here 
+
+        $hashed_pass = null ;
+
+        return $hashed_pass ;
+    }
+
 
 
 

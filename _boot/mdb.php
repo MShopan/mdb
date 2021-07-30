@@ -63,7 +63,9 @@ class DB {
     }
 
     function log_sql($sql) {
-        // log sql in file here 
+        // log sql in file here          
+        logger::info($this->_sql,"DB:$this->_tblName");
+
     }
 
     static function hello(){
@@ -82,6 +84,9 @@ class DB {
     }
 
     public function secure_value($_val){
+        // $newVal = mysqli_real_escape_string($_val); 
+        // return $newVal ;
+
         return $_val ;
     }
 

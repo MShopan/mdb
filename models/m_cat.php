@@ -6,8 +6,6 @@ class m_cat extends model{
     public $tblName = "m_cat" ;
     public $show_title = "اسماء الأصناف الفرعية ";
 
-
-
      public $struct = array (
          'id' => 'int',
          'name' => 'string',

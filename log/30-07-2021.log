@@ -25,3 +25,33 @@
 [2021-07-30 02:49:34][info][warn]: we use one secret only on secret[0] in secret array in model 
 [2021-07-30 02:49:40][info][warn]: we use one secret only on secret[0] in secret array in model 
 [2021-07-30 02:49:43][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-07-30 03:01:34][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-07-30 03:01:48][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-07-30 05:59:37][info][error]: a 
+[2021-07-30 06:00:35][info][error]: a 
+[2021-07-30 06:01:51][info][error]: a 
+[2021-07-30 06:02:02][info][error]: a 
+[2021-07-30 06:02:26][DB:users][info]: SELECT * FROM `users` ;  
+[2021-07-30 06:02:39][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-07-30 04:02:39][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-07-30 06:18:37][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:23:13][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:23:14][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:40:15][DB:m_cat][info]: DELETE FROM `m_cat` WHERE  `id` = '115'  ;  
+[2021-07-30 06:42:07][DB:m_cat][info]: DELETE FROM `m_cat` WHERE  `id` = ''  ;  
+[2021-07-30 06:42:09][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:10][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:11][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:12][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:13][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:14][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:14][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:23][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:24][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:25][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:26][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:49][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:42:52][DB:m_cat][info]: DELETE FROM `m_cat` WHERE  `id` = '116'  ;  
+[2021-07-30 06:42:57][DB:m_cat][info]: DELETE FROM `m_cat` WHERE  `id` = '116'  ;  
+[2021-07-30 06:43:16][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 06:43:19][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '74'  ;  

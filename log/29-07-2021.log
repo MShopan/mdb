@@ -130,3 +130,8 @@
 [2021-07-29 04:52:16][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '98'  ;  
 [2021-07-29 04:52:19][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '92'  ;  
 [2021-07-29 04:52:31][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '110'  ;  
+[2021-07-29 04:54:21][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '135'  ;  
+[2021-07-29 05:01:34][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-07-29 05:01:45][DB:users][info]: SELECT * FROM `users` ;  
+[2021-07-29 05:01:48][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '7'  ;  
+[2021-07-29 05:01:59][DB:users][info]: SELECT * FROM `users` ;  

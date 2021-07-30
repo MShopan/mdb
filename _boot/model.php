@@ -164,6 +164,47 @@ class model {
 
     }
 
+    /**
+     * add DELETE from 
+     */
+
+     public public function add_delete_form()
+     {
+        $_id = $_GET['id'];
+
+        mhtml::dump($_id);
+
+        $model = $this->get_tbl_name();
+
+        mhtml::startForm("delete","backend_delete.php");
+        mhtml::h1("are you sure do delete");
+       
+        echo  "<button name=\"confirm\" type=\"submit\" value=\"yes\" > yes </button>";
+        echo "<button name=\"confirm\" type=\"submit\" value=\"no\" > no </button>";
+
+        echo "<input class='vis_hidden' name='model' value=$model  >";
+        echo "<input class='vis_hidden' name='id' value=$_id  >";
+       
+        mhtml::endForm();
+       
+       
+     }
+     
+     public public function do_delete_row($id)
+     {  
+         # code...
+        //  mhtml::dump($id);
+
+        $myDel = DB::table($this->get_tbl_name())->where('id',$id)
+                          ->delete();
+
+                          
+         
+     }
+     
+
+   
+
 
 }
 ?>

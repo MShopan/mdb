@@ -195,8 +195,28 @@ class model {
          # code...
         //  mhtml::dump($id);
 
-        $myDel = DB::table($this->get_tbl_name())->where('id',$id)
-                          ->delete();
+        $model = $this->get_tbl_name() ;
+
+        try {
+            $myDel = DB::table($model)->where('id',$id)
+            ->delete();
+        } catch (Throwable $th) {
+            echo 'error in delete item ';
+            exit;
+        }
+
+        mhtml::h1('delete success');
+        // redirect 
+ 
+        $root_url = helper::get_root_url();
+
+        echo "
+        <script>
+           window.location.replace('$root_url/view/show.php?model=$model');
+        </script>
+        ";
+
+
 
                           
          

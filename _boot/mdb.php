@@ -337,6 +337,8 @@ class DB {
          // log the sql if sql log varible is true in the configuration file 
          $this->log_sql($this->_sql);
 
+         $this->excute('delete');
+
          return $this;
      }
 
@@ -401,7 +403,8 @@ class DB {
          return $this;
      }
 
-     function excute(){
+     function excute($type="select"){
+
 
         $connect=mysqli_connect($this->host,$this->username,$this->password,$this->db);
 
@@ -413,13 +416,20 @@ class DB {
 
         $this->result =  array();
 
-        
-        while($row=mysqli_fetch_assoc($query)){
+        if ($type=="select"){
+            while($row=mysqli_fetch_assoc($query)){
 
-            array_push($this->result , $row);
+                array_push($this->result , $row);
+            }
+
+            return $this->result;
         }
 
-        return $this->result;
+        if($type=='delete'){
+            // do nothing 
+            // query doing in top 
+            return $this;
+        }
 
 
 

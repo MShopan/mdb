@@ -1,7 +1,7 @@
 <?php
 require('../_boot/bootstrap.php');
 
-mhtml::dump($_POST);
+// mhtml::dump($_POST);
 
 if($_POST['confirm']=='yes'){
     // echo 'do confirm';

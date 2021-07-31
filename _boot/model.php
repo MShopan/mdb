@@ -170,9 +170,9 @@ class model {
 
      public public function add_delete_form()
      {
+
         $_id = $_GET['id'];
 
-        mhtml::dump($_id);
 
         $model = $this->get_tbl_name();
 
@@ -208,15 +208,15 @@ class model {
         mhtml::h1('delete success');
         // redirect 
  
-        $root_url = helper::get_root_url();
+        $root_url = config::get('root_url');
 
         echo "
         <script>
-           window.location.replace('$root_url/view/show.php?model=$model');
+        setTimeout(() => {
+            window.location.replace('$root_url/view/show.php?model=$model');
+        }, 1000);
         </script>
         ";
-
-
 
                           
          
@@ -228,3 +228,7 @@ class model {
 
 }
 ?>
+
+<script>
+
+</script>

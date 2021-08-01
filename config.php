@@ -7,6 +7,11 @@
        'db' => 'acc_main_port',
        'db_username' => 'root',
        'db_password' => 'egypt2013',
+       'charset'=>'utf8',
+       'timezone'=>'Africa/Cairo',
+
+
+
 
   );
 ?>

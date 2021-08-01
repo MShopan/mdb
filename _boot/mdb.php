@@ -406,12 +406,14 @@ class DB {
 
      function excute($type="select"){
 
+        // defualt type select 
+
 
         $connect=mysqli_connect($this->host,$this->username,$this->password,$this->db);
 
-        $connect->set_charset("utf8"); 
+        $connect->set_charset(config::get('charset')); 
         
-        date_default_timezone_set('Africa/Cairo');
+        date_default_timezone_set(config::get('timezone'));
 
         $query=mysqli_query($connect,$this->_sql);
 
@@ -424,13 +426,18 @@ class DB {
             }
 
             return $this->result;
-        }
 
-        if($type=='delete'){
+        } elseif($type=='delete'){
             // do nothing 
             // query doing in top 
             return $this;
+        } elseif ($type=='update') {
+            return $this;
+        } elseif ($type=='operation') {
+            return $this;
         }
+
+
 
 
 

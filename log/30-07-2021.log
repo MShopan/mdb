@@ -128,3 +128,4 @@
 [2021-07-30 05:05:31][DB:m_cat][info]: DELETE FROM `m_cat` WHERE  `id` = '103'  ;  
 [2021-07-30 05:05:32][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
 [2021-07-30 05:06:14][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-07-30 05:12:23][DB:m_cat][info]: SELECT * FROM `m_cat` ;  

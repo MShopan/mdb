@@ -1,9 +1,10 @@
 <?php
+
 class config{
 
    static function get($var){
        
-       require('../config.php');
+       require('config.php');
 
        $value = $config[$var];
 

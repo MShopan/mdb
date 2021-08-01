@@ -6,7 +6,7 @@ require('logger.php');
 require('model.php');
 require('helper.php');
 require('permission.php');
-require('config.php');
+require('config_cls.php');
 require('style.html');
 
 

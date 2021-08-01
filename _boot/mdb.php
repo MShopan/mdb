@@ -19,7 +19,6 @@
  
 //   echo $user->get_sql();
 
- 
 
 class DB {
     /**
@@ -46,10 +45,12 @@ class DB {
 
     function __construct(){
 
-        $this->host = '127.0.0.1';
-        $this->db = 'acc_main_port';
-        $this->username = 'root';
-        $this->password = 'egypt2013';
+        require('config.php');
+
+        $this->host = config::get('host');
+        $this->db = config::get('db');
+        $this->username = config::get('db_username');
+        $this->password = config::get('db_password');
        
 
 

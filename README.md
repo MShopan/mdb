@@ -21,3 +21,13 @@ the project run in php 5 and above
 ## truncate
 
 ## drop
+
+# config.php
+
+important to set main_root in config array and write the same manually in _boot/config_cls.php in the class static property $main_root
+
+this means main_root set in the 2 php files 
+
+
+
+

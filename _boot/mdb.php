@@ -45,7 +45,7 @@ class DB {
 
     function __construct(){
 
-        require('config.php');
+        //require('config.php');
 
         $this->host = config::get('host');
         $this->db = config::get('db');

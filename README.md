@@ -24,9 +24,9 @@ the project run in php 5 and above
 
 # config.php
 
-important to set main_root in config array and write the same manually in _boot/config_cls.php in the class static property $main_root
+*important* to set main_root in config array and write the same manually in_boot/config_cls.php in the class static property $main_root
 
-this means main_root set in the 2 php files 
+> this means main_root set in the 2 php files 
 
 ```php
 // config.php
@@ -76,14 +76,24 @@ has many will by function and property in the child model like this
 
 ```
 
-to run the code and get relatinon data do this 
+> to run the code and get relatinon data do this 
 
 ```php
 
 $res = $mohammed->find(1)->permissions()->get();
 
 ```
+# Task list
+
+* [x]query builder 
+* [ ]elequent
+* [ ]permissions
+* [ ]manage login
+
+# resources
+
+[php documentation](https://www.php.net/docs.php
+"php documentation")
 
 
-
-
+![php logo](https://www.php.net/images/logos/php-logo.svg)

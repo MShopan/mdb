@@ -92,3 +92,4 @@
 [2021-08-02 03:56:27][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
 [2021-08-02 03:56:33][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
 [2021-08-02 03:56:46][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-02 04:09:00][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  

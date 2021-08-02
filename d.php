@@ -9,6 +9,8 @@ require('config.php');
 
 mhtml::dump($config['main_root']);
 
+mhtml::h1('form lab');
+
 
 
 

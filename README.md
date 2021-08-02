@@ -85,7 +85,7 @@ $res = $mohammed->find(1)->permissions()->get();
 ```
 # Task list
 
-* [x]query builder 
+* [x]query builder
 * [ ]elequent
 * [ ]permissions
 * [ ]manage login

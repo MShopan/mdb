@@ -7,5 +7,12 @@ class helper {
        return config::get('root_url');
    }
 
+   static function remove_last_chr($var)
+   {
+       $value = substr($var,0,-1);
+       mhtml::dump($value);
+       return $value;
+   }
+
 }
 ?>

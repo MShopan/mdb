@@ -6,8 +6,9 @@
 class mhtml {
 
     // var dump 
-    static function dump($var) {
-        echo '<pre>' , var_dump($var) , '</pre>' ;
+    static function dump($var,$title="") {
+        
+        echo "<h3>$title</h3>" , '<pre>' , var_dump($var) , '</pre>' ;
     }
 
     static function print_r($var) {

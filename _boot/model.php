@@ -7,6 +7,8 @@
 
 class model {
 
+    private $result=null;
+
    public function get_tbl_name(){
        return $this->tblName;
    }
@@ -221,6 +223,71 @@ class model {
                           
          
      }
+
+     public function find($id)
+     {
+        $tbl_name= $this->get_tbl_name();
+
+        $result = DB::table($tbl_name)->where('id',$id)->get();
+
+        $this->result= $result;
+
+        return $this ;
+
+         
+     }
+
+     public function hasMany($modelName , $forginKey="" , $localKey="id" ){
+        
+        // add forginKey default value if not set by programmer
+        if( empty($forginKey) ) {
+            $tbl_name= $this->get_tbl_name();
+            $forginKey=helper::remove_last_chr($tbl_name).'_id';
+        }
+
+        $currnt_result = $this->result ;
+
+        // mhtml::dump($currnt_result);
+
+        if(is_array($currnt_result)){
+            // 2multi dementionl array
+            
+            foreach ($currnt_result as $key => $el) {
+
+                $my_id = $el[$localKey];
+
+                $result = DB::table($modelName)->where($forginKey,$my_id)->get();
+            
+                $currnt_result[$key][$modelName]=$result;
+
+            }
+
+        // end if 
+        } else {
+            // one diminssion arrray 
+            $my_id = $currnt_result[$localKey];
+
+            $result = DB::table($modelName)->where($forginKey,$my_id)->get();
+            
+            $currnt_result[$key][$modelName]=$result;
+
+        }
+
+
+        $this->result = $currnt_result ;
+
+
+         return  $this;
+     }
+
+     public function get()
+     {
+
+        return $this->result;
+         
+     }
+
+     
      
 
    

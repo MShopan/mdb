@@ -55,6 +55,10 @@ class users extends model {
         'creator',
     );
 
+    public $hasMany = array(
+        'permissions',
+    );
+
 
     public function hash_secret(){
         // do this functino to hash password when edit and insert function 
@@ -64,6 +68,14 @@ class users extends model {
 
         return $hashed_pass ;
     }
+
+    public function permissions(){
+        return $this->hasMany('permissions');
+    }
+
+
+
+
 
 
 

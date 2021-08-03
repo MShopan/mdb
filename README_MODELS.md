@@ -25,7 +25,6 @@ suported types is :
 | -------|-------|
 | number | allowed |
 | string | allowed |
-| password | allowed |
 | date   | `will added later` |
 | date_time | `will added later` |
 

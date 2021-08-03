@@ -9,7 +9,7 @@ for require boot file you will use must require `bootstarp.php` file who located
 
 ```php
 // require this file in the start of php file to allow you to use the framwork classes 
-reqquire('_boot/bootstrap.php');
+require('_boot/bootstrap.php');
 ```
 
 # mhtml class 

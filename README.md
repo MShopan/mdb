@@ -3,6 +3,46 @@
 
 [models](README_MODELS.md)
 
+# require boot
+
+for require boot file you will use must require `bootstarp.php` file who located in `_boot` folder 
+
+```php
+// require this file in the start of php file to allow you to use the framwork classes 
+reqquire('_boot/bootstrap.php');
+```
+
+# mhtml class 
+
+user mhtml static functions to do html code with php encapsulation 
+
+```php
+
+mhtml::dump($var); // to dump any array or var 
+
+mhtml::h1($text);  
+mhtml::h1('hello world'); // output : <h1>hello wold </h1>
+// you allso can use h2 : h6
+
+
+mhtml::startTable(); // output : <table>
+mhtml::startTable('class1'); // output : <table class='class1'>
+mhtml::endTable(); // output : </table>
+
+mhtml::startTr(); // output : <tr>
+mhtml::endTr(); // output : </tr>
+
+mhtml::th('age'); // output : <th>name</th> 
+mhtml::td(25); // output : <td>25</td>
+
+mhtml::startForm(); // output : <form >
+mhtml::startForm($formName , $action = $_SERVER['PHP_SELF'] , $method = 'post'  ); // defult action is php self and defulat method is post 
+
+mhtml::endForm(); // output : </table>
+
+mhtml::print_r_table($array) // for print array in table view
+
+```
 
 # mdb query builder
 

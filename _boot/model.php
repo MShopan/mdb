@@ -47,6 +47,7 @@ class model {
 
 
 
+    $show_one= $this->option_global['show_one']; 
     $edit= $this->option_global['edit']; 
     $delete= $this->option_global['delete'];     
 
@@ -71,6 +72,7 @@ class model {
     // mhtml::th($arr[0][$key]);
 
 
+    if($show_one){   mhtml::th($this->virtual_global['show_one']); }
     if($edit){   mhtml::th($this->virtual_global['edit']);  }
     if($delete){   mhtml::th($this->virtual_global['delete']); }
 
@@ -91,8 +93,10 @@ class model {
             // aditionl td
             $currentId = $arrValue['id'];
             $model = $this->get_tbl_name() ;
+             $virtual_show_one = $this->virtual_global['show_one'];
              $virtual_edit = $this->virtual_global['edit'];
              $virtual_delete = $this->virtual_global['delete'];
+             if($show_one){   mhtml::th("<a href='show_one.php?model=$model&id=$currentId'>$virtual_show_one</a>"); }
             if($edit){   mhtml::th("<a href='edit.php?model=$model&id=$currentId'>$virtual_edit</a>");  }
             if($delete){   mhtml::th("<a href='delete.php?model=$model&id=$currentId'>$virtual_delete</a>"); }
 
@@ -105,6 +109,69 @@ class model {
     mhtml::endTable();
 
 }
+
+/**
+ * show ONE view
+ */
+
+public function show_one(){
+
+    $_id = $_GET['id']; 
+
+    $this->show_one_data($_id);
+
+    $this->show_one_relation($_id);
+
+
+}
+
+public function show_one_data($_id)
+{
+
+    $tblName = $this->get_tbl_name();
+
+    $source = DB::table($tblName)->where('id',$_id)->get();
+
+    $source_first = $source[0];
+
+    // mhtml::dump($source_first);
+
+
+    $struct = $this->struct;
+
+    mhtml::startTable("tbl_show_one");
+    
+    // loop througth fields
+    foreach ($this->show as $key => $field) {
+
+         
+        $virtual_name = $this->virtual_names[$field];
+        $value = $source_first[$field];
+
+        mhtml::startTr();
+        mhtml::td($virtual_name);
+        mhtml::td($value);
+        mhtml::endTr();
+
+
+    }
+
+    // if you need kind of the value retrive struct like add_edit_form()
+    
+
+    mhtml::endTable();
+    
+}
+
+
+///////////
+
+public function show_one_relation($_id){
+    // acording to $show_one_relations probery in the child model 
+    mhtml::h3("show relation of $_id");
+}
+
+/////////
 
 /**
  * 

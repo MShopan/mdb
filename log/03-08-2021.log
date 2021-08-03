@@ -66,3 +66,76 @@
 [2021-08-03 01:56:33][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
 [2021-08-03 01:56:46][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
 [2021-08-03 02:09:00][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-03 05:54:02][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-03 05:54:24][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '6'  ;  
+[2021-08-03 03:54:24][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:55:20][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-03 05:56:03][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-03 03:56:03][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:56:11][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 03:56:11][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:56:20][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '2'  ;  
+[2021-08-03 05:56:34][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-03 03:56:34][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:56:45][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '8'  ;  
+[2021-08-03 03:56:45][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:57:03][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '8'  ;  
+[2021-08-03 03:57:03][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:57:50][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 03:57:50][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 05:58:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 03:58:21][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 06:00:10][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 04:00:10][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 06:00:51][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:01:07][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:01:33][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:02:46][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:03:06][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:04:36][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:04:47][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:05:20][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:05:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:06:55][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:09:29][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:10:06][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:12:13][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:12:31][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:13:45][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:14:33][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:14:46][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:15:02][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 06:15:35][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '2'  ;  
+[2021-08-03 06:15:38][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '1001'  ;  
+[2021-08-03 06:15:42][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '1002'  ;  
+[2021-08-03 06:15:49][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-08-03 06:16:01][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '101'  ;  
+[2021-08-03 06:16:06][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:18:38][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:18:39][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:18:41][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:18:52][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:20:19][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:20:28][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:21:04][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:23:12][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:23:46][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:23:51][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:23:57][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '922'  ;  
+[2021-08-03 06:24:09][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-03 06:26:34][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '8'  ;  
+[2021-08-03 04:26:34][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-03 06:26:36][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-03 06:27:13][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-03 06:27:19][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '8'  ;  
+[2021-08-03 06:27:22][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '6'  ;  
+[2021-08-03 06:27:30][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-08-03 06:28:03][DB:m_cat][info]: SELECT * FROM `m_cat` ;  
+[2021-08-03 06:28:13][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '92'  ;  
+[2021-08-03 06:28:21][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '123'  ;  
+[2021-08-03 06:28:24][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '96'  ;  
+[2021-08-03 06:28:30][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '96'  ;  
+[2021-08-03 06:28:35][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:28:36][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
+[2021-08-03 06:28:39][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '98'  ;  
+[2021-08-03 06:28:51][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  

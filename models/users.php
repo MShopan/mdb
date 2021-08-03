@@ -26,12 +26,14 @@ class users extends model {
     public $option_global = array(
        'edit' => true,
        'delete' => true,
+       'show_one' => true,
     );
 
 
     public $virtual_global = array(
         'edit' => 'تعديل',
         'delete' => 'حذف',
+        'show_one' => 'عرض',
         'add' => 'إضافة',
     );
 
@@ -56,6 +58,10 @@ class users extends model {
     );
 
     public $hasMany = array(
+        'permissions',
+    );
+
+    public $show_one_relations = array(
         'permissions',
     );
 

@@ -35,6 +35,8 @@ class m_cat extends model{
     public $option_global = array(
         'edit' => true,
         'delete' => true,
+        'show_one' => true,
+
     );
 
 
@@ -42,6 +44,7 @@ class m_cat extends model{
         'edit' => 'تعديل',
         'delete' => 'حذف',
         'add' => 'إضافة',
+        'show_one' => 'عرض',
     );
 
 

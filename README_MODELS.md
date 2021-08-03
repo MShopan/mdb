@@ -21,11 +21,13 @@ class users extends model {
 > `$struct` write the structue of the table fileds
 
 suported types is :
+| type   | notes |
+| -------|-------|
+| number | allowed |
+| string | allowed |
+| date   | `will added later` |
+| date_time | `will added later` |
 
-* number
-* string
-* date  `will added later`
-* date_time `will added later`
 
 ### important property for view model 
 

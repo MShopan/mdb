@@ -57,9 +57,6 @@ class users extends model {
         'creator',
     );
 
-    public $hasMany = array(
-        'permissions',
-    );
 
     public $show_one_relations = array(
         'permissions',

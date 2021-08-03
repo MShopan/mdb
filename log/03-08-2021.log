@@ -139,3 +139,9 @@
 [2021-08-03 06:28:36][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '99'  ;  
 [2021-08-03 06:28:39][DB:m_cat][info]: SELECT * FROM `m_cat` WHERE  `id` = '98'  ;  
 [2021-08-03 06:28:51][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 11:14:39][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-03 11:14:40][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 11:15:30][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-03 11:16:01][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-03 09:16:01][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-03 11:17:31][DB:users][info]: SELECT * FROM `users` ;  

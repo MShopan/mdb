@@ -172,3 +172,45 @@ public $show_title = "اسماء المستخدمين";
 
 
 ```
+
+
+
+# find() in model 
+
+to find model by id use find function and use get() function to get the data like this
+
+```php
+
+// retirve data with user id 
+
+$res = $users->find(2)->get();
+
+```
+
+not using get with return currently the instance of the object 
+
+# Relations
+
+## hasMany 
+
+has many will by function and property in the child model like this
+
+```php
+
+    public $hasMany = array(
+        'permissions',
+    );
+
+    public function permissions(){
+        return $this->hasMany('permissions');
+    }
+
+```
+
+> to run the code and get relatinon data do this 
+
+```php
+
+$res = $mohammed->find(1)->permissions()->get();
+
+```

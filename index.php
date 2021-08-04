@@ -1,25 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
 <?php 
 
 $db_username = ''; //username
 $db_password = ''; //password
 //path to database file
-$database_path = $_SERVER["DOCUMENT_ROOT"] . "\access\accessdatabase.accdb";
-//check file exist before we proceed
-if (!file_exists($database_path)) {
-    die("Access database file not found !");
-}
 
-//create a new PDO object
-$database = new PDO("odbc:DRIVER={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=$database_path; Uid=$db_username; Pwd=$db_password;");
-$sql  = "SELECT * FROM userdetails";
-$result = $database->query($sql);
-while ($row = $result->fetch()) {
-    echo '<pre>';
-    print_r($row);
-    echo '</pre>';
-}
+echo 'how';
 
 
  ?>

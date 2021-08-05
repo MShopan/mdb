@@ -85,6 +85,15 @@ $user = DB::table('users')->where('id',1)->where('age','>=','25')->get();
 
 ```
 
+### LIKE and < > .. etc
+```php
+$user = DB::table('users')-where('frist_name','LIKE','ali')->get();
+
+
+// you can alse uese > , < , >= , <= , = 
+
+```
+
 ## insert
 ```php
 

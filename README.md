@@ -54,6 +54,16 @@ the project run in php 5 and above
 
 ## select
 
+```php
+$users = DB::table('users')->get();
+// output will be all usrs
+
+$user = DB::table('users')->where('id',1)->get();
+
+// output will be multi demintion array frist element is the user id 1
+
+```
+
 ### where
 
 ### orWhere
@@ -67,9 +77,13 @@ the project run in php 5 and above
 ## update
 
 ## truncate
-
+```php
+DB::table('cars')->truncate();
+```
 ## drop
-
+```php
+DB::table('cars')->drop();
+```
 
 
 # config.php

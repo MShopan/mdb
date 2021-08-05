@@ -66,15 +66,50 @@ $user = DB::table('users')->where('id',1)->get();
 
 ### where
 
+```php
+$user = DB::table('users')->where('id',1)->get();
+
+```
 ### orWhere
+```php
+$user = DB::table('users')->where('id',1)->orWhere('age','25')->get();
+$user = DB::table('users')->where('id',1)->orWhere('age','>=','25')->get();
+
+
+```
 
 ### andWhere
+```php
+$user = DB::table('users')->where('id',1)->where('age','>=','25')->get();
+
+
+```
 
 ## insert
+```php
+
+$user = DB::table('users')->isert(array(
+'name'=>'ali',
+'age'=>'19',
+));
+
+```
 
 ## delete
+```php
+$user = DB::table('users')->where('id',5)->delete();
+
+
+```
 
 ## update
+```php
+$user = DB::table('users')->where('id',6)->update(array(
+'name'=>'ali',
+'age'=>'19',
+));
+
+```
 
 ## truncate
 ```php

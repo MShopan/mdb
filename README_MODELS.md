@@ -21,11 +21,14 @@ class users extends model {
 > `$struct` write the structue of the table fileds
 
 suported types is :
+| type   | notes |
+| -------|-------|
+| number | allowed |
+| string | allowed |
+| date   | `will added later` |
+| date_time | `will added later` |
 
-* number
-* string
-* date  `will added later`
-* date_time `will added later`
+> enum and other type is allowed 
 
 ### important property for view model 
 
@@ -167,5 +170,47 @@ public $show_title = "اسماء المستخدمين";
         return $this->hasMany('permissions');
     }
 
+
+```
+
+
+
+# find() in model 
+
+to find model by id use find function and use get() function to get the data like this
+
+```php
+
+// retirve data with user id 
+
+$res = $users->find(2)->get();
+
+```
+
+not using get with return currently the instance of the object 
+
+# Relations
+
+## hasMany 
+
+has many will by function and property in the child model like this
+
+```php
+
+    public $hasMany = array(
+        'permissions',
+    );
+
+    public function permissions(){
+        return $this->hasMany('permissions');
+    }
+
+```
+
+> to run the code and get relatinon data do this 
+
+```php
+
+$res = $mohammed->find(1)->permissions()->get();
 
 ```

@@ -5,16 +5,16 @@
 
 # require boot
 
-for require boot file you will use must require `bootstarp.php` file who located in `_boot` folder 
+for require boot file you will use must require `bootstarp.php` file who located in `_boot` folder
 
 ```php
 // require this file in the start of php file to allow you to use the framwork classes 
 require('_boot/bootstrap.php');
 ```
 
-# mhtml class 
+# mhtml class
 
-user mhtml static functions to do html code with php encapsulation 
+user mhtml static functions to do html code with php encapsulation
 
 ```php
 
@@ -50,8 +50,6 @@ this simple class to use query builder class to bulild sql query and run it
 in the pure php enviroment
 the project run in php 5 and above
 
-
-
 ## select
 
 ```php
@@ -70,7 +68,9 @@ $user = DB::table('users')->where('id',1)->get();
 $user = DB::table('users')->where('id',1)->get();
 
 ```
+
 ### orWhere
+
 ```php
 $user = DB::table('users')->where('id',1)->orWhere('age','25')->get();
 $user = DB::table('users')->where('id',1)->orWhere('age','>=','25')->get();
@@ -79,6 +79,7 @@ $user = DB::table('users')->where('id',1)->orWhere('age','>=','25')->get();
 ```
 
 ### andWhere
+
 ```php
 $user = DB::table('users')->where('id',1)->where('age','>=','25')->get();
 
@@ -86,6 +87,7 @@ $user = DB::table('users')->where('id',1)->where('age','>=','25')->get();
 ```
 
 ### LIKE and < > .. etc
+
 ```php
 $user = DB::table('users')-where('frist_name','LIKE','ali')->get();
 
@@ -95,6 +97,7 @@ $user = DB::table('users')-where('frist_name','LIKE','ali')->get();
 ```
 
 ## insert
+
 ```php
 
 $user = DB::table('users')->isert(array(
@@ -105,6 +108,7 @@ $user = DB::table('users')->isert(array(
 ```
 
 ## delete
+
 ```php
 $user = DB::table('users')->where('id',5)->delete();
 
@@ -112,6 +116,7 @@ $user = DB::table('users')->where('id',5)->delete();
 ```
 
 ## update
+
 ```php
 $user = DB::table('users')->where('id',6)->update(array(
 'name'=>'ali',
@@ -121,20 +126,22 @@ $user = DB::table('users')->where('id',6)->update(array(
 ```
 
 ## truncate
+
 ```php
 DB::table('cars')->truncate();
 ```
+
 ## drop
+
 ```php
 DB::table('cars')->drop();
 ```
-
 
 # config.php
 
 *important* to set main_root in config array and write the same manually in_boot/config_cls.php in the class static property $main_root
 
-> this means main_root set in the 2 php files 
+> this means main_root set in the 2 php files
 
 ```php
 // config.php
@@ -165,6 +172,5 @@ class config{
 
 [php documentation](https://www.php.net/docs.php
 "php documentation")
-
 
 ![php logo](https://www.php.net/images/logos/php-logo.svg)

@@ -10,7 +10,7 @@ class helper {
    static function remove_last_chr($var)
    {
        $value = substr($var,0,-1);
-       mhtml::dump($value);
+  
        return $value;
    }
 

@@ -4,6 +4,7 @@ class users extends model {
 
      public $show_title = "اسماء المستخدمين";
 
+
      public $tblName = "users" ;
 
      public $struct = array (

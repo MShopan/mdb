@@ -19,8 +19,6 @@ require("../models/$tbl_name.php");
 
 $myModel = new $tbl_name;
 
-$myModel->add_title();
-
 $myModel->add_new_button();
 
 $myModel->print_show_table();

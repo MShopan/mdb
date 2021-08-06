@@ -39,13 +39,28 @@ class model {
     *
     */
 
-   public function print_show_table(){
+   public function print_show_table($queryBuilderArray = "__"){
+    // add title of the table 
+    $this->add_title();
+    // set the defult query bilder array
+    if($queryBuilderArray=="__"){
 
-    $arr =  DB::table( $this->get_tbl_name() )->get();
+        $arr =  DB::table( $this->get_tbl_name() )->get();
+    } else {
+        // set array if user set
+        $arr = $queryBuilderArray ;
+    }
+
+    if (empty($arr)) {
+
+         $no_data = config::get('no_data');
+         $title = $this->show_title;
+
+        mhtml::h3("$no_data");
+        return 0;
+    }
 
     $show_key_arr = array_keys($this->show);
-
-
 
     $show_one= $this->option_global['show_one']; 
     $edit= $this->option_global['edit']; 
@@ -55,6 +70,7 @@ class model {
 
     $table_class= "pure-table";
 
+   
 
     mhtml::startTable($table_class);
     mhtml::startTr();
@@ -118,6 +134,8 @@ public function show_one(){
 
     $_id = $_GET['id']; 
 
+    $this->_id = $_id ;
+
     $this->show_one_data($_id);
 
     $this->show_one_relation($_id);
@@ -168,7 +186,44 @@ public function show_one_data($_id)
 
 public function show_one_relation($_id){
     // acording to $show_one_relations probery in the child model 
-    mhtml::h3("show relation of $_id");
+
+    $myModel = $this->get_tbl_name();
+
+    if (isset($this->show_one_relations)) {
+
+        $relations = $this->show_one_relations ; 
+    
+        if(count($relations)>0){
+          
+            foreach ($relations as $relation ) {
+            //    echo $relation ;
+            require(config::get('main_root')."/models/{$relation}.php");
+
+            $relation_model = new $relation ;
+
+            $result_array = $this->find($_id)
+                    ->$relation()
+                    -> get();
+
+            // mhtml::dump($result_array,'all');
+
+            $_relation_data_array = $result_array[0][$relation] ;
+
+            // mhtml::dump($_relation_data_array,'relation');
+
+            $relation_model->print_show_table($_relation_data_array);
+
+            }
+    
+            
+        }
+      
+    } else {
+        return 0; 
+    }
+
+
+
 }
 
 /////////
@@ -314,7 +369,6 @@ public function show_one_relation($_id){
 
         $currnt_result = $this->result ;
 
-        // mhtml::dump($currnt_result);
 
         if(is_array($currnt_result)){
             // 2multi dementionl array

@@ -3,6 +3,8 @@
        'appName' => 'accounting' ,
        'root_url' => 'http://127.0.0.1/test' ,
        'main_root'=> 'C:\\AppServ\\www\\MDB\\',
+       'auth_model'=> 'users',
+
        //
        // design config
        'no_data' => 'لا يوجد يبانات ',

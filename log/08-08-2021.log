@@ -6,3 +6,239 @@
 [2021-08-08 01:53:45][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
 [2021-08-08 01:53:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
 [2021-08-08 01:53:53][info][warn]: we use one secret only on secret[0] in secret array in model 
+[2021-08-08 02:04:46][DB:section][info]: SELECT * FROM `section` ;  
+[2021-08-08 02:04:52][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-08 02:04:58][DB:permissions][info]: SELECT * FROM `permissions` ;  
+[2021-08-08 02:05:24][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-08 02:05:26][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:05:26][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:05:26][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '2'  ;  
+[2021-08-08 02:05:30][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:05:30][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:05:30][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:05:35][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-08 02:15:28][DB:permissions][info]: SELECT * FROM `permissions` ;  
+[2021-08-08 02:15:52][DB:section][info]: SELECT * FROM `section` ;  
+[2021-08-08 02:16:03][DB:permissions][info]: SELECT * FROM `permissions` ;  
+[2021-08-08 02:16:10][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-08 02:16:12][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:16:12][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:16:12][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '2'  ;  
+[2021-08-08 02:29:17][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:29:17][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:29:17][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '2'  ;  
+[2021-08-08 02:29:26][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:29:26][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:46:24][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:47:16][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '2'  ;  
+[2021-08-08 02:47:16][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '2'  ;  
+[2021-08-08 02:47:33][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:47:33][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:49:53][info][warn]: access is denied : aa 
+[2021-08-08 02:49:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:49:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:52:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:52:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:52:54][info][warn]: access is denied : aa 
+[2021-08-08 02:53:23][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:23][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:23][info][warn]: access is denied : aa 
+[2021-08-08 02:53:24][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:24][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:24][info][warn]: access is denied : aa 
+[2021-08-08 02:53:24][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:24][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:24][info][warn]: access is denied : aa 
+[2021-08-08 02:53:24][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:24][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:24][info][warn]: access is denied : aa 
+[2021-08-08 02:53:24][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:24][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:24][info][warn]: access is denied : aa 
+[2021-08-08 02:53:25][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:25][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:25][info][warn]: access is denied : aa 
+[2021-08-08 02:53:25][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:25][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:25][info][warn]: access is denied : aa 
+[2021-08-08 02:53:25][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:25][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:25][info][warn]: access is denied : aa 
+[2021-08-08 02:53:37][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:37][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:37][info][warn]: access is denied : aa 
+[2021-08-08 02:53:38][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:38][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:38][info][warn]: access is denied : aa 
+[2021-08-08 02:53:38][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:53:38][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:53:38][info][warn]: access is denied : aa 
+[2021-08-08 02:54:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:54:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:54:21][info][warn]: access is denied : aa 
+[2021-08-08 02:55:02][info][warn]: access is denied : aa 
+[2021-08-08 02:55:02][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:55:02][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:55:25][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:55:25][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:55:25][info][warn]: access is denied : aa 
+[2021-08-08 02:58:46][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:58:46][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 02:58:46][info][warn]: access is denied : aa 
+[2021-08-08 02:58:46][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 02:58:46][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:00:12][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:00:12][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:00:46][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:00:46][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:20][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:20][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:22][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:22][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:22][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:22][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:22][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:22][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:22][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:01:22][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:01:22][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:52][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:52][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:02:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:02:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:03:18][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:03:18][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:03:18][info][warn]: access is denied : aa 
+[2021-08-08 03:05:34][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:05:34][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:05:34][info][warn]: access is denied : aa 
+[2021-08-08 03:05:49][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:05:49][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:05:49][info][warn]: access is denied : aa 
+[2021-08-08 03:09:17][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:09:17][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:09:17][info][warn]: access is denied : aa 
+[2021-08-08 03:09:19][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:09:19][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:09:19][info][warn]: access is denied : aa 
+[2021-08-08 03:09:19][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:09:19][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:09:19][info][warn]: access is denied : aa 
+[2021-08-08 03:09:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:09:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:09:54][info][warn]: access is denied : aa 
+[2021-08-08 03:10:08][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:08][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:21][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:21][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:22][info][warn]: access is denied : show_users 
+[2021-08-08 03:10:32][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:32][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:51][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:51][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:52][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:52][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:52][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:52][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:52][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:52][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:53][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:10:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:10:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:19][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:19][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:19][info][warn]: access is denied :  
+[2021-08-08 03:11:26][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:26][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:30][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:30][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:30][info][warn]: access is denied : add_df 
+[2021-08-08 03:11:32][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:32][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:32][info][warn]: access is denied : add_df 
+[2021-08-08 03:11:35][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:35][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:35][info][warn]: access is denied :  
+[2021-08-08 03:11:39][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:39][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:39][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:39][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:39][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:39][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:40][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:40][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:40][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:40][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:41][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:41][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:41][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:42][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:11:42][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:11:42][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:28][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:28][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:28][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:28][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:31][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:31][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:31][info][warn]: access is denied : add_uservcvx 
+[2021-08-08 03:12:35][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:35][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:49][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:49][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:51][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:51][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:12:54][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:12:54][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:13:01][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:13:01][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:15:49][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:15:49][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:17:08][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:17:08][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:17:08][info][info]: access is allow : add_users 
+[2021-08-08 03:17:11][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:17:11][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:17:11][info][info]: access is allow : add_users 
+[2021-08-08 03:17:14][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:17:14][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:17:14][info][warn]: access is denied : add_m 
+[2021-08-08 03:17:17][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 03:17:17][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 03:17:17][info][info]: access is allow : add_m_cat 

@@ -7,6 +7,7 @@ require('model.php');
 require('helper.php');
 require('permission.php');
 require('config_cls.php');
+require('auth.php');
 require('style.html');
 
 

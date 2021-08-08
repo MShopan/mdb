@@ -16,7 +16,7 @@ class model {
        return $this->show_title;
    }
 
-   public public function add_title()
+   public function add_title()
    {
 
     mhtml::h1($this->get_title());
@@ -292,7 +292,7 @@ public function show_one_relation($_id){
      * add DELETE from 
      */
 
-     public public function add_delete_form()
+     public  function add_delete_form()
      {
 
         $_id = $_GET['id'];
@@ -314,7 +314,7 @@ public function show_one_relation($_id){
        
      }
      
-     public public function do_delete_row($id)
+     public  function do_delete_row($id)
      {  
          # code...
         //  mhtml::dump($id);

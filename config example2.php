@@ -2,7 +2,7 @@
   return $config = array(
        'appName' => 'accounting' ,
        'root_url' => 'http://127.0.0.1/test' ,
-       'main_root'=> 'C:\\AppServ\\www\\MDB\\',
+       'main_root'=> 'C:\\AppServ\\www\\test\\',
        //
        // design config
        'no_data' => 'لا يوجد يبانات ',

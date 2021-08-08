@@ -1,0 +1,8 @@
+[2021-08-08 01:47:49][DB:section][info]: SELECT * FROM `section` ;  
+[2021-08-08 01:53:11][DB:section][info]: SELECT * FROM `section` ;  
+[2021-08-08 01:53:43][DB:users][info]: SELECT * FROM `users` ;  
+[2021-08-08 01:53:45][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 01:53:45][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 01:53:45][DB:permissions][info]: SELECT * FROM `permissions` WHERE  `user_id` = '1'  ;  
+[2021-08-08 01:53:53][DB:users][info]: SELECT * FROM `users` WHERE  `id` = '1'  ;  
+[2021-08-08 01:53:53][info][warn]: we use one secret only on secret[0] in secret array in model 

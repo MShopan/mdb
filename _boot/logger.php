@@ -31,12 +31,15 @@ class myLogger {
         // !important
         // this will be form config file form the futur
         //
-        $project_main_dir = "test";
+        // $project_main_dir = "test";
 
 
-        $serverDir = $_SERVER['DOCUMENT_ROOT']  ;
-        $mainDir = "$serverDir/$project_main_dir";
+        // $serverDir = $_SERVER['DOCUMENT_ROOT']  ;
+        // $mainDir = "$serverDir/$project_main_dir";
 
+        $mainDir = config::get('main_root');
+
+        date_default_timezone_set('UTC');
         $currentDate = date("d-m-Y") ;
        
         $this->filename = "$mainDir/log/$currentDate.log";

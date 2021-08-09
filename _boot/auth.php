@@ -8,11 +8,11 @@ trait login {
 
     public function make()
     {
-
         $class = __CLASS__ ;
         mhtml::h1(" class used is : $class ");
 
     }
+
 }
 
 
@@ -35,6 +35,7 @@ class login_user{
 
         $this->set_login_user_data();
         // $this->make();
+        
         
     }
 

@@ -6,7 +6,7 @@
 
 class config{
 
-    static $main_root = 'C:\AppServ\www\MDB';
+    static $main_root = 'C:\AppServ\www\test';
 
    static function get($var){
 

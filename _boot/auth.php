@@ -4,16 +4,7 @@ $auth_model = config::get('auth_model');
 $main_root = config::get('main_root');
 require("{$main_root}\\models\\{$auth_model}.php");
 
-trait login {
 
-    public function make()
-    {
-        $class = __CLASS__ ;
-        mhtml::h1(" class used is : $class ");
-
-    }
-
-}
 
 
 /**
@@ -28,13 +19,12 @@ class login_user{
     public $id = null ;
     public $user = null;
 
-    use login ;
     
 
     function __construct(){ 
 
         $this->set_login_user_data();
-        // $this->make();
+      
         
         
     }

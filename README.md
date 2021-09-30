@@ -1,4 +1,8 @@
 
+#m_db
+
+md is the project to simulate laravel query builder and some laravel functions in php v5.2
+
 # documentaion links
 
 [models](README_MODELS.md)
